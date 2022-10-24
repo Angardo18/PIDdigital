@@ -37,12 +37,13 @@ __error__(char *pcFilename, uint32_t ui32Line){}
 #define SPI_ANCHO      16  // Número de bits que se envían cada vez, entre 4 y 16
 
 
-// valor cambia si la frecuencia de muestreo cambia
-float KI = 245.878; //245.88/FREQ_MUESTREO
-float KP = 4.28666;
-float KD = 0.01868;//0.01868*FREQ_MUESTREO
 
-//volatile float v0, v1;
+// Estos valores fueron ajustados en vivo, los valores finales estan en el
+// reporte
+float KI = 245.878;
+float KP = 4.28666;
+float KD = 0.01868;
+//volatile float v0, v1a;
 volatile int32_t error=0, errorAnterior,errorAcu = 0;
 volatile int32_t y;
 volatile float vRef, vRet;
